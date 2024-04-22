@@ -81,6 +81,9 @@ const todoSlice = createSlice({
         state.error = false;
       })
       .addCase(getTodos.fulfilled, (state,action) => {
+
+        console.log('action.payload', action.payload )
+
         state.todos = action.payload;
         state.loading = false;
         state.error = false;
