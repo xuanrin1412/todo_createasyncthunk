@@ -1,5 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+// import { persistReducer } from 'redux-persist';
 
 export enum VisibilityFilter {
   SHOW_ALL = 'SHOW_ALL',
@@ -87,7 +88,7 @@ const todoSlice = createSlice({
       .addCase(getTodos.rejected, (state) => {
         state.loading = false;
         state.error = true;
-      });
+      })
   },
 })
 export const { addTodo,toggleTodo,setFilter} = todoSlice.actions;

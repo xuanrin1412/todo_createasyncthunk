@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { VisibilityFilter, addTodo, setFilter, } from './features/todo_AsyncThunk'
-import { useAppDispatch } from './store';
+import { VisibilityFilter, addTodo, setFilter } from '../features/todos/todosSlice'
+import { useAppDispatch } from '../store';
 
 const TodoForm: React.FC = () => {
     const [text, setText] = useState('');
